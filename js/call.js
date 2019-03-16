@@ -30,20 +30,26 @@ $(document).ready(function(){
                 success: function(data) {
                     for (i = 0; i < data.result.limit; i++) {
                         result 
-                            += "<p><h1>" 
+                            += '<div class="item">'
+                            + '<h1>' 
                             + data.result.records[i]["Trading Name"]
-                            + "</h1><br>"
-                            + "Address:<br>"
+                            + '</h1>'
+                            + '<div class="label">Address:</div>'
                             + data.result.records[i]["Outlet Address"] 
-                            + ", " 
+                            + ', ' 
                             + data.result.records[i]["Outlet Postcode"] 
-                            + "<br>" 
-                            + "Telephone Number:<br>"
+                            + '<br><br>' 
+                            + '<div class="label">Telephone Number:</div>'
                             + data.result.records[i]["Telephone Number"] 
-                            + "<br>" 
-                            + "Discount:<br>"
+                            + '<br><br>'
+                            + '<div class="label">Discount:</div>'
                             + data.result.records[i].Discount 
-                            + "</p>";
+                            + '<br><br>'
+                            + 'Senior Eligible: '
+                            + data.result.records[i]["Senior Scheme Flag"]
+                            + '<br>Carer Eligible: '
+                            + data.result.records[i]["Carer Scheme Flag"]
+                            + '</div>';
                     }
                     $("#data").html(result);
                     if (numResults > 0 ) {
