@@ -149,8 +149,6 @@ p {
         margin: 1em auto; }
     #form {
         width: calc( 90% - 1em ); }
-    input[type="text"]
-    }
     .item {
         width: 100%;
         border-left: 0px; 
