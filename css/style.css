@@ -154,4 +154,6 @@ p {
         border-left: 0px; 
         border-right: 0px;
         box-shadow: 0px 4px 4px #EEE; }
+    li {
+        margin-right: 0; }
 }
